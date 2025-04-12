@@ -1,17 +1,12 @@
 {
     "compilerOptions": {
-        "outDir": "./dist",
-        "module": "ESNext",
         "target": "ESNext",
-        "declaration": true,
-        "declarationDir": "./dist/types",
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
         "allowJs": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "rootDir": "src"
     },
     "include": [
         "src/**/*"

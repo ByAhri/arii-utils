@@ -1,34 +1,22 @@
 {
-  "scripts": {
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
-    "build:esm": "tsc --module ESNext --outDir dist/esm",
-    "build": "npm run build:cjs && npm run build:esm",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run build"
-  },
-  
   "name": "@byahri/utils",
   "version": "1.0.3",
   "description": "utility functions that i use for arii and more",
+  "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
-    ".": {
-      "require": {
-        "default": "./dist/cjs/index.js",
-        "type": "commonjs"
-      },
-      "import": {
-        "default": "./dist/esm/index.js",
-        "type": "module"
-      },
-      "types": "./dist/types/index.d.ts"
-    }
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js"
   },
-  "files": [
-    "dist"
-  ],
+  "scripts": {
+    "build:cjs": "tsc -p tools/config/tsconfig.cjs.json",
+    "build:esm": "tsc -p tools/config/tsconfig.esm.json",
+    "tools:clean": "node tools/scripts/clean.mjs",
+    "tools:pack": "node tools/scripts/pack.mjs",
+    "build": "npm run tools:clean && npm run build:cjs && npm run build:esm && npm run tools:pack"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ByAhri/arii-utils.git"

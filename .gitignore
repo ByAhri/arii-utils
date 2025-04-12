@@ -1,8 +1,4 @@
 .env
 node_modules
 package-lock.json
-patrons
-kofi
-files
-python/venv
-cookie.txt
+dist
