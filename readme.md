@@ -16,8 +16,13 @@ npm install my-package
 ## Usage
 
 ```typescript
-import { MyUtil } from "my-package";
+import { AriiUtils, AdvancedUtil } from "my-package";
 
-console.log(MyUtil.greet("World")); // Hello, World!
-console.log(MyUtil.add(2, 3)); // 5
+// Create an instance of AriiUtils
+const util = new AriiUtils({ id: "123", name: "Utility" });
+console.log(util.getDetails()); // Output: ID: 123, Name: Utility
+
+// Create an instance of AdvancedUtil
+const advancedUtil = new AdvancedUtil({ id: "456", name: "Advanced", extraFeature: "Custom Feature" });
+console.log(advancedUtil.getDetails()); // Output: ID: 456, Name: Advanced, Extra Feature: Custom Feature
 ```
