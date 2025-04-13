@@ -6,7 +6,7 @@ class Snowflake {
     /**
      * generates a snowflake id based on the epoch provided
      * @param epoch - The epoch to use for generating the snowflake. Default is 1420070400000 (January 1, 2015).
-     * @returns snowkake id as a bigint
+     * @returns snowflake id as a bigint
      * @throws TypeError if the epoch is not a number, bigint or Date
      * @example
      * ```ts

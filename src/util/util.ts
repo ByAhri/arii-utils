@@ -1,8 +1,9 @@
-export class AriiUtils {
+
+export class Utils {
     // Static property (class-level data)
     private static version = "1.0.3";
 
-    get getVersion() {
-        return AriiUtils.version;
-    }
+    static get getVersion() {
+        return Utils.version;
+    };
 }

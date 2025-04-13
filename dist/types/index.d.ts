@@ -10,11 +10,12 @@ import { Snowflake } from "./snowflake/snowflake.js";
 import { Tokens } from "./tokens/tokens.js";
 import { BufferEncodingType } from "./types/options.js";
 import { Utils } from "./util/util.js";
-export default {
-    Esm,
-    Format,
-    Snowflake,
-    Tokens,
-    Utils,
-    BufferEncodingType
+declare const _default: {
+    Esm: typeof Esm;
+    Format: typeof Format;
+    Snowflake: typeof Snowflake;
+    Tokens: typeof Tokens;
+    Utils: typeof Utils;
+    BufferEncodingType: typeof BufferEncodingType;
 };
+export default _default;

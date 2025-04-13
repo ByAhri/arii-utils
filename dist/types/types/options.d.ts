@@ -1,13 +1,10 @@
-// Define an interface for the options
 export interface UtilsOptions {
     id: string;
     name: string;
-    extraFeature?: string; // Optional property for flexibility
+    extraFeature?: string;
 }
-
-export type BufferEncoding = "ascii" | "utf8" | "utf-8" | "utf16le" | "utf-16le" | "ucs2" | "ucs-2" | "base64" | "base64url" | "latin1" | "binary" | "hex"
-
-export enum BufferEncodingType {
+export type BufferEncoding = "ascii" | "utf8" | "utf-8" | "utf16le" | "utf-16le" | "ucs2" | "ucs-2" | "base64" | "base64url" | "latin1" | "binary" | "hex";
+export declare enum BufferEncodingType {
     ascii = "ascii",
     utf8 = "utf8",
     "utf-8" = "utf-8",

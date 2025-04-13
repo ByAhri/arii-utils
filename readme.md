@@ -1,28 +1,50 @@
-# My Package
+@byahri/utils
 
-A utility package for reusable functions and classes.
+utility functions that i use for arii and more
 
-## Table of Contents
+## contents
 
-- [Installation](#installation)
-- [Usage](#usage)
+- [install](#installation)
+- [usage](#usage)
 
-## Installation
+## install
 
 ```bash
-npm install my-package
+npm install @byahri/utils
 ```
 
-## Usage
-
+## usage
+### typescript or esm
 ```typescript
-import { AriiUtils, AdvancedUtil } from "my-package";
+import { AriiTokens } from "my-package";
 
-// Create an instance of AriiUtils
-const util = new AriiUtils({ id: "123", name: "Utility" });
-console.log(util.getDetails()); // Output: ID: 123, Name: Utility
+import { Tokens, BufferEncodingType, Format } from "@byahri/utils";
 
-// Create an instance of AdvancedUtil
-const advancedUtil = new AdvancedUtil({ id: "456", name: "Advanced", extraFeature: "Custom Feature" });
-console.log(advancedUtil.getDetails()); // Output: ID: 456, Name: Advanced, Extra Feature: Custom Feature
+const randomToken = Tokens.getRandomToken(32, BufferEncodingType.base64url);
+const snowflake = Tokens.getSnowflake().toString();
+
+const time = 3204900; // Example timestamp in milliseconds
+
+const formatTime = Format.simpleTimeFormat(time, true);
+
+console.log(randomToken); // output: 7hUjwGQZJhumhGE7Y2zhpr7P9BnrTgttP-GWPJgKP44
+console.log(snowflake); // output: 1360781405386182656
+console.log(formatTime); // output: 53 min 24 sec
+```
+
+### commonjs
+
+```javascript
+const { Tokens, BufferEncodingType, Format } = require("@byahri/utils");
+
+const randomToken = Tokens.getRandomToken(32, BufferEncodingType.base64url);
+const snowflake = Tokens.getSnowflake().toString();
+
+const time = 3204900; // Example timestamp in milliseconds
+
+const formatTime = Format.simpleTimeFormat(time, true);
+
+console.log(randomToken); // output: 7hUjwGQZJhumhGE7Y2zhpr7P9BnrTgttP-GWPJgKP44
+console.log(snowflake); // output: 1360781405386182656
+console.log(formatTime); // output: 53 min 24 sec
 ```

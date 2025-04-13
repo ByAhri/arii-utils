@@ -1,6 +1,6 @@
 {
   "name": "@byahri/utils",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "utility functions that i use for arii and more",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -8,7 +8,8 @@
   "types": "./dist/types/index.d.ts",
   "exports": {
     "require": "./dist/cjs/index.js",
-    "import": "./dist/esm/index.js"
+    "import": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts"
   },
   "scripts": {
     "build:cjs": "tsc -p tools/config/tsconfig.cjs.json",
@@ -33,7 +34,8 @@
   },
   "homepage": "https://github.com/ByAhri/arii-utils#readme",
   "dependencies": {
-    "@sapphire/snowflake": "^3.5.5"
+    "@sapphire/snowflake": "^3.5.5",
+    "colors": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

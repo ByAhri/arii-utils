@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AriiUtils = void 0;
-class AriiUtils {
+exports.Utils = void 0;
+class Utils {
     // Static property (class-level data)
     static version = "1.0.3";
-    get getVersion() {
-        return AriiUtils.version;
+    static get getVersion() {
+        return Utils.version;
     }
+    ;
 }
-exports.AriiUtils = AriiUtils;
+exports.Utils = Utils;
