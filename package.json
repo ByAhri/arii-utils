@@ -12,6 +12,7 @@
     "types": "./dist/types/index.d.ts"
   },
   "scripts": {
+    "push": "npm run tools:clean && git add . && git commit -m \"update\" && git push",
     "build:cjs": "tsc -p tools/config/tsconfig.cjs.json",
     "build:esm": "tsc -p tools/config/tsconfig.esm.json",
     "tools:clean": "node tools/scripts/clean.mjs",
