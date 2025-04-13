@@ -16,8 +16,6 @@ npm install @byahri/utils
 ## usage
 ### typescript or esm
 ```typescript
-import { AriiTokens } from "my-package";
-
 import { Tokens, BufferEncodingType, Format } from "@byahri/utils";
 
 const randomToken = Tokens.getRandomToken(32, BufferEncodingType.base64url);
